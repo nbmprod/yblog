@@ -1,34 +1,21 @@
+<template>
+  <Page />
+  <Footer />
+</template>
+
 <script>
-import Navbar from './components/Navbar.vue';
+import Page from './components/Page.vue';
+import Footer from './components/Footer.vue';
 
 export default{
   name: 'App',
-  components: { Navbar },
-
-  // data() {
-  //   return {
-  //     blogPage: false,
-  //   }
-  // }
+  components: { Page, Footer },
 
 }
-
 </script>
 
-<template>
-  <div class="page">
-    <Navbar :blogPage=true />
-  </div>
-  <footer class="footer">
-  </footer>
-</template>
 
-<style>
-.page {
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 auto;
-}
+<style lang="scss">
 
 .container {
   max-width: 1110px;
@@ -36,9 +23,4 @@ export default{
   box-sizing: border-box;
 }
 
-.footer {
-  background-color: var(--grey-2);
-  margin-top: 3em;
-  flex-shrink: 0;
-}
 </style>
