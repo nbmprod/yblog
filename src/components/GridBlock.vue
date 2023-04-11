@@ -1,23 +1,58 @@
 <template>
-    <div class="grid__block">
-        <img class="grid__img" src="./../assets/img/blog/test-2.jpg" alt="topic-pic">
-        <div class="grid__title-box">
-            <p class="grid__type">РАЗБОР</p>    
-            <h2 class="grid__title">Velit officia consequat duis enim velit</h2>
-            <p class="grid__subtitle">Amet minim met minim mollit non deser</p>    
-        </div>
+    <div class="grid__wrapper" >
+        <a v-for="block in gridBlockInfo" href="./pages/article.html" class="grid__block">
+            <img class="grid__img"
+            :src=imagePath(block) 
+            alt="topic-pic">
+            <div class="grid__title-box">
+                <p class="grid__type">{{ block.type }}</p>    
+                <h2
+                :key="block.title"
+                class="grid__title">
+                {{ block.title }}
+                </h2>
+                <p 
+                class="grid__subtitle">
+                {{ block.description }}
+                </p>    
+            </div>
+        </a>
     </div>
 </template>
 
 <script>
+import { gridBlockInfo } from './../block-info.js';
+
 export default {
   name: 'GridBlock',
+  data() {
+    return {
+      gridBlockInfo: gridBlockInfo,
+      imgSrc: 'src/assets/img/blog/test-1.jpg',
+    };
+  },
+
+  computed: {
+    imagePath() {
+      return (block) => `src/assets/img/blog/${block.imgSrc}`;
+    },
+  }
+
 };
+
+
 </script>
 
 
 <style lang="scss" scoped>
 
+.grid__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 3em;
+    justify-items: center;
+}
 .grid__block{
     margin: 0;
     border-radius: 10px;
@@ -28,6 +63,8 @@ export default {
     background: var(--mint);
     text-decoration: none;
     color: var(--black);
+    width: 100%;
+    height: fit-content;
     
     &:hover{
         -webkit-box-shadow: 1px 1px 37px -14px var(--grey);
@@ -43,7 +80,7 @@ export default {
 
 .grid__img{
     width: 100%;
-    max-height: 50%;
+    // max-height: 50%;
     border: 1px solid var(--black);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -62,7 +99,6 @@ export default {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-sizing: border-box;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -82,6 +118,7 @@ export default {
     font-weight: 800;
     color:var(--red);
     letter-spacing: 0.15em;
+    text-transform: uppercase;
 }
 
 .grid__type_side{
