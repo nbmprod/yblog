@@ -1,5 +1,6 @@
 <template>
   <div class="page">
+    <Burger />
     <Navbar :blogPage=true />
     <Grid />
   </div>
@@ -9,6 +10,7 @@
 import Navbar from './Navbar.vue';
 import Grid from './Grid.vue';
 import Article from './article/Article.vue';
+import Burger from './Burger.vue';
 
 export default{
   name: 'Page',
@@ -16,6 +18,7 @@ export default{
     Navbar,
     Grid,
     Article,
+    Burger
 },
 
 }

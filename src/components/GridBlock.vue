@@ -33,7 +33,7 @@ export default {
   props:{
     SideBar: {
       type: Boolean,
-      required: true,
+      required: false,
       default: false,
     },
   },
@@ -178,7 +178,7 @@ export default {
     .grid__wrapper{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
         gap: 3em;
         justify-items: center;
         padding: 1.5em 1em;
@@ -186,7 +186,6 @@ export default {
 
     .grid__wrapper_side{
         padding: 0;
-        grid-template-rows: 1fr;
     }
 }
 

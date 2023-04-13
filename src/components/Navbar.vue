@@ -118,7 +118,7 @@ export default {
 }
 
 //LAPTOP SMALL
-@media(max-width: 1300px){
+@media(max-width: 1400px){
     .navbar__messengers{
         flex-direction: column;
     }

@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { gridBlockInfo } from './../block-info.js';
+import { gridBlockInfo } from '../../block-info.js';
 
 export default {
   name: 'GridBlock',
