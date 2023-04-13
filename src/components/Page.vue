@@ -1,20 +1,23 @@
 <template>
   <div class="page">
     <Navbar :blogPage=true />
-    <Grid />
+    <!-- <Grid /> -->
+    <Article />
   </div>
 </template>
 
 <script>
 import Navbar from './Navbar.vue';
 import Grid from './Grid.vue';
+import Article from './article/Article.vue';
 
 export default{
   name: 'Page',
-  components: { 
+  components: {
     Navbar,
-    Grid 
-  },
+    Grid,
+    Article,
+},
 
 }
 

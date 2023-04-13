@@ -1,22 +1,18 @@
 <template>
-    <div
-    :class="sideBarStyle('grid__wrapper')">
-        <a v-for="block in gridBlockInfo" href="./pages/article.html" 
-        :class="sideBarStyle('grid__block')">
-            <img 
-            :class="sideBarStyle('grid__img')"
+    <div class="grid__wrapper" >
+        <a v-for="block in gridBlockInfo" href="./pages/article.html" class="grid__block">
+            <img class="grid__img"
             :src=imagePath(block) 
             alt="topic-pic">
-            <div
-            :class="sideBarStyle('grid__title-box')">
+            <div class="grid__title-box">
                 <p class="grid__type">{{ block.type }}</p>    
                 <h2
                 :key="block.title"
-                :class="sideBarStyle('grid__title')">
+                class="grid__title">
                 {{ block.title }}
                 </h2>
-                <p
-                :class="sideBarStyle('grid__subtitle')">
+                <p 
+                class="grid__subtitle">
                 {{ block.description }}
                 </p>    
             </div>
@@ -29,21 +25,10 @@ import { gridBlockInfo } from './../block-info.js';
 
 export default {
   name: 'GridBlock',
-
-  props:{
-    SideBar: {
-      type: Boolean,
-      required: true,
-      default: false,
-    },
-  },
-
-
   data() {
     return {
       gridBlockInfo: gridBlockInfo,
       imgSrc: 'src/assets/img/blog/test-1.jpg',
-      
     };
   },
 
@@ -51,15 +36,8 @@ export default {
     imagePath() {
       return (block) => `src/assets/img/blog/${block.imgSrc}`;
     },
-
-    sideBarStyle(){
-        if (this.SideBar === true){
-            return (style) => `${style} ${style}_side`;
-        } else {
-            return (style) => `${style}`;
-        }
-    }
   }
+
 };
 
 
@@ -75,14 +53,6 @@ export default {
     gap: 3em;
     justify-items: center;
 }
-.grid__wrapper_side{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 1.5em;
-    justify-items: center;
-}
-
 .grid__block{
     margin: 0;
     border-radius: 10px;
@@ -182,11 +152,6 @@ export default {
         gap: 3em;
         justify-items: center;
         padding: 1.5em 1em;
-    }
-
-    .grid__wrapper_side{
-        padding: 0;
-        grid-template-rows: 1fr;
     }
 }
 

@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
       <div class="footer__wrapper">
-          <h4 class="footer__title">Психолог Яна Бычкова, 2022</h4>
+          <h4 class="footer__title">Психолог Яна Бычкова</h4>
           <a class="footer__madeby" href="https://t.me/nikita_m_b">made by Nikita Bychkov</a>
       </div>
   </footer>
