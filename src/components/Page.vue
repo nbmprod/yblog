@@ -1,8 +1,7 @@
 <template>
   <div class="page">
     <Navbar :blogPage=true />
-    <!-- <Grid /> -->
-    <Article />
+    <Grid />
   </div>
 </template>
 
