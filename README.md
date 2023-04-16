@@ -1,35 +1,21 @@
 # yblog
 
-This template should help get you started developing with Vue 3 in Vite.
+Blog app under development. Blog for psychologist personal web site https://yanabychkova.com/
 
-## Recommended IDE Setup
+## Stack
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- Vue.js
+- Vite
+- Pinia
+- Axios
+- Node.js and Express
 
-## Customize configuration
+## Features
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- A blog about psychology, consisting of multiple articles on various topics
+- A general articles grid, where users can browse and select articles to read
+- An article page, where users can view a specific article in detail, including the text of the article and any associated images
+- An admin panel, where authorized users can create and publish articles, as well as manage existing articles
+- The ability for admins to choose a category for each article and upload images to accompany the articles
+- The application can be optimized for search engines to improve the discoverability of the articles
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
