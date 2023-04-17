@@ -1,8 +1,10 @@
 <template>
     <div
     :class="sideBarStyle('grid__wrapper')">
-        <a v-for="block in gridBlockInfo" href="./pages/article.html" 
-        :class="sideBarStyle('grid__block')">
+        <router-link v-for="block in gridBlockInfo" 
+        :class="sideBarStyle('grid__block')" 
+        :to="{name: 'testArticle'}"
+        tag="a">
             <img 
             :class="sideBarStyle('grid__img')"
             :src=imagePath(block) 
@@ -20,7 +22,7 @@
                 {{ block.description }}
                 </p>    
             </div>
-        </a>
+        </router-link>
     </div>
 </template>
 

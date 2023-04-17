@@ -1,15 +1,15 @@
 <template>
-  <Page />
-  <Footer />
+  <Page /> 
 </template>
 
 <script>
 import Page from './components/Page.vue';
-import Footer from './components/Footer.vue';
+
 
 export default{
   name: 'App',
-  components: { Page, Footer },
+  
+  components: { Page },
 
 }
 </script>

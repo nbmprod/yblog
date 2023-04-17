@@ -2,7 +2,8 @@
   <div class="page">
     <Burger />
     <Navbar :blogPage=true />
-    <Grid />
+    <router-view />
+    <Footer />
   </div>
 </template>
 
@@ -11,14 +12,18 @@ import Navbar from './Navbar.vue';
 import Grid from './Grid.vue';
 import Article from './article/Article.vue';
 import Burger from './Burger.vue';
+import Footer from './Footer.vue';
+import router from './../../router.js';
 
 export default{
   name: 'Page',
+  router,
   components: {
     Navbar,
     Grid,
     Article,
-    Burger
+    Burger,
+    Footer, 
 },
 
 }
